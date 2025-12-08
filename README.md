@@ -1,7 +1,7 @@
 1. Project Title
 Fizelle Luxe Collection Management System
 
-- Project Description
+2. Project Description
 This project is about developing a jewelry store website that allows users to browse products, view details, and add items to their cart. The system includes an index page for product display, a customer page for user interactions, a login page for secure access, and an admin page where the administrator can manage products and update store information. The website aims to provide a clean, user-friendly shopping experience while making it easy for the admin to maintain and organize the store.
 
 3. Features
