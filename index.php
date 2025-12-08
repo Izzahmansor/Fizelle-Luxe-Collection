@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizelle Jewellery</title>
+
+    <!-- Link to Font Awesome Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Link Swiper Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="index_style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Fizelle Luxe Collection</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#review" class="nav-link">Review</a></li>
+                <li class="nav-item"><a href="#choice" class="nav-link">New Arrival</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="login2.php" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Made to Be Adored</h2>
+                    <h3 class="subtitle">Crafting Timeless Beauty, One Piece at a Time</h3>
+                    <p class="description">Step into a world of sophistication with Fizelle Luxe Collection. From dazzling necklaces to intricately designed rings, each piece reflects exceptional artistry and quality—perfect for meaningful gifts or personal treasures.</p>
+                    
+                    <div class="buttons">
+                        <a href="login2.php" class="button order-now">Order Now</a>
+                        <a href="#contact" class="button contact-us">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <img src="ring-hero-section.png" alt="" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="about-section.jpg" alt="About" class="about-image"> 
+                </div>
+
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">We are inspired by modern simplicity — clean lines, refined shapes, and subtle details that speak volumes. Our jewellery is designed for those who appreciate a minimalist aesthetic without compromising elegance or quality.
+                    By blending contemporary trends with timeless craftsmanship, we create pieces that fit effortlessly into any lifestyle. Made to be worn, loved, and styled every day, our collection ensures that sophistication is always within reach.</p>
+
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Products Section-->
+
+        <section class="products-section" id="products">
+            <h2 class="section-title">Our Products</h2>
+            <div class="section-content">
+                <ul class="products-list">
+                    <li class="products-item">
+                        <img src="ring.jpg" alt="Ring" class="products-image">
+                        <h3 class="name">Eternal Circles</h3>
+                        <p class="text">Timeless rings crafted to symbolize love, strength, and unforgettable moments.</p>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+
+                    </li>
+
+                    <li class="products-item">
+                        <img src="bracelet.jpg" alt="Bracelet" class="products-image">
+                        <h3 class="name">Grace Bands</h3>
+                        <p class="text">Delicate bracelets designed to add effortless elegance to your everyday style.</p>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+
+                    </li>
+
+                    <li class="products-item">
+                        <img src="necklace.jpg" alt="Necklace" class="products-image">
+                        <h3 class="name">Elegance Strands</h3>
+                        <p class="text">Refined necklaces that illuminate your look with modern sophistication.</p><br>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+
+                    </li>
+
+                    <li class="products-item">
+                        <img src="earrings.jpg" alt="Earrings" class="products-image">
+                        <h3 class="name">Luxe Drops</h3>
+                        <p class="text">Chic earrings created to frame your beauty with subtle luxury and shine.</p>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+
+                    </li>
+
+                    <li class="products-item">
+                        <img src="anklet.jpg" alt="Anklet" class="products-image">
+                        <h3 class="name">Soft Steps</h3>
+                        <p class="text">Delicate anklets crafted to add a graceful sparkle with every step.</p>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+
+                    </li>
+
+                    <li class="products-item">
+                        <img src="cufflinks.jpg" alt="Cufflinks" class="products-image">
+                        <h3 class="name">Gentlemen's Accents</h3>
+                        <p class="text">Sleek cufflinks that elevate your formal wear with a touch of refined luxury.</p>
+
+                        <div class="buttons">
+                            <a href="login2.php" class="learn-more">Learn More</a>
+                        </div>
+                        
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section class="review-section" id="review">
+            <h2 class="section-title">Reviews</h2>
+            <div class="section-content">
+                <div class="slider-container swiper">
+                    <div class="slider-wrapper">
+                        <ul class="review-list swiper-wrapper">
+
+                            <li class="review swiper-slide">
+                                <img src="user1.jpg" alt="User" class="user-image">
+                                <h3 class="name">Sarah Johnson</h3>
+                                <i class="feedback">I’m in love with the craftsmanship of the jewellery here. Every piece feels luxurious and elegant, and the packaging was just as beautiful. Definitely my go-to shop for special occasions.</i>
+                            </li>
+
+                            <li class="review swiper-slide">
+                                <img src="user2.jpg" alt="User" class="user-image">
+                                <h3 class="name">Roselia Burgmen</h3>
+                                <i class="feedback">From browsing to checkout, everything was smooth. The staff were very helpful and patient. My bracelet fits perfectly and adds such a graceful touch to my outfits.</i>
+                            </li>
+
+                            <li class="review swiper-slide">
+                                <img src="user3.jpg" alt="User" class="user-image">
+                                <h3 class="name">Amelia Smith</h3>
+                                <i class="feedback">The designs are modern yet timeless. I bought a necklace as a gift and it exceeded my expectations. The details are so refined and it looks even more gorgeous in person..</i>
+                            </li>
+
+                            <li class="review swiper-slide">
+                                <img src="user4.jpg" alt="User" class="user-image">
+                                <h3 class="name">Mikayla Howthorn</h3>
+                                <i class="feedback">You can really feel the elegance and care put into every item. The quality is outstanding and the designs are so sophisticated. Highly recommended for anyone who loves luxe jewellery.</i>
+                            </li>
+
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--New Arrivals Section-->
+
+        <section class="choice-section" id="choice">
+            <h2 class="section-title">New Arrivals</h2>
+            <div class="section-content">
+                <ul class="choice-list">
+
+                    <li class="choice-item">
+                        <img src="choice1.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                    <li class="choice-item">
+                        <img src="choice3.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                    <li class="choice-item">
+                        <img src="choice5.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                    <li class="choice-item">
+                        <img src="choice4.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                    <li class="choice-item">
+                        <img src="choice6.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                    <li class="choice-item">
+                        <img src="choice2.jpg" alt="New Arrivals" class="choice-image">
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!--Contact Us Section-->
+
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <ul class="contact-info-list">
+
+                    <li class="contact-info">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <p>568, Jalan Seraya 2/7, Kampung Keladi, 09000 Kulim, Kedah</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>info@fizelleluxecollection.com</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(+60) 1987215526</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Tuesday - Saturday: 10:00 AM - 10:00 PM</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Sunday & Monday: Closed</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class="fa-regular fa-globe"></i>
+                        <p>www.fizelleluxecollection.com</p>
+                    </li>
+                </ul>
+
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your Name" class="form-input" required>
+                    <input type="email" placeholder="Your Email" class="form-input" required>
+                    <textarea placeholder="Your Message" class="form-input" required></textarea>
+                    <button class="submit-button">Submit</button>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">@ 2025 Fizelle Luxe Collection</p>
+
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="policy-link">Refund policy</a>
+                </p>
+            </div>
+        </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizelle Jewellery</title>
+
+    <!-- Link to Font Awesome Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="index_style.css">
+</head>
+
+<style>
+    /*import Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /*colour*/
+    --white-color: #ffffff;
+    --dark-color: #000000;
+    --primary-color: #203256ff; /* Dark blue focus border */
+    --secondary-color: #FFD700; /* Gold accent */
+    ---light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /*font size*/
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.1.2remrem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /*font weight*/
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    /*border radius*/
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 15px;
+
+    /*site max-width*/
+    --site-max-width: 1300px;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling the entire page */
+body {
+    background: url('background2.jpg') center fixed;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    color: var(--white-color);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+/*Styling whole site*/
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+
+}
+
+/*Navbar Styling*/
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+    padding: 0 0 0 50px;
+}
+
+header .navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for Login Button */
+.navbar .login-btn {
+    background: var(--primary-color); 
+    color: var(--white-color); 
+    padding: 10px 18px;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Login button hover effect */
+.navbar .login-btn:hover {
+    background: var(--secondary-color);
+    color: var(--dark-color); 
+    border: 1px solid var(--secondary-color); 
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    background: var(--primary-color); 
+    color: var(--white-color); 
+    padding: 10px 18px;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+    font-weight: var(--font-weight-medium);
+}
+
+.navbar .nav-menu .nav-link:hover {
+    background: var(--secondary-color);
+    color: var(--dark-color); 
+    border: 1px solid var(--secondary-color); 
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+
+/* Form Popup Styling */
+.form-popup {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 50px 50px;
+    background: #f8f8f8;
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* Form Box */
+.form-box {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Form Details - Header */
+.form-details {
+    color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Form Content */
+.form-content {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.form-content h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    border: 1px solid var(--medium-gray-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field input:focus {
+    border-color: var(--primary-color);
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    font-size: var(--font-size-m);
+    color: var(--medium-gray-color);
+    transform: translateY(-50%);
+}
+
+.input-field input:focus ~ label {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    top: -10px;
+}
+
+form button {
+    padding: 15px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius-m);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--dark-color);
+    font-size: var(--font-size-s);
+}
+
+.signup-text .signup-link {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+}
+
+.signup-text .signup-link:hover {
+    text-decoration: underline;
+}
+
+/*Footer styling*/
+
+.footer-section {
+    padding: 30px 0;
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+.footer-section .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: var(--white-color);
+    transform: 0.2s ease;
+}
+
+.footer-section .social-link-list {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+}
+
+.footer-section .social-link-list .social-link {
+    font-size: var(--font-size-l);
+    transition: 0.3s ease;
+}
+
+.footer-section .social-link-list .social-link:hover, .footer-section .policy-text .policy-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section .policy-text .separator {
+    margin: 0 5px;
+    color: var(--white-color);
+}
+
+/*Responsive media query code for max width 1024px*/
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+/* Responsive Styling for Mobile */
+
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);  /* Apply the blur effect here */
+        background: rgba(0, 0, 0, 0.2); /* Optional: dark background behind the blurred content */
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px; /* Initially off-screen */
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--primary-color);
+        transition: left 0.3s ease;
+    }
+
+    /* Show the menu when active */
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--white-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+
+    /* Hamburger Menu (displayed only on small screens) */
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+        color: var(--white-color);
+        cursor: pointer;
+    }
+
+    /* Open and close buttons styling */
+    .navbar #menu-open-button {
+        display: block;
+        color: var(--white-color);
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .navbar #menu-close-button {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: var(--white-color);
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .footer-section .section-content {
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px;
+    }
+
+    .footer-section .social-link-list {
+        justify-content: center;
+        margin-bottom: 20px; /* Add some space at the bottom */
+    }
+}
+
+/*Responsive media query code for max width 640px*/
+
+@media screen and (max-width: 640px) {
+
+    .footer-section .section-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<body>
+
+    <!-- Header / Navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Fizelle Luxe Collection</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.php #about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="index.php #products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="index.php #review" class="nav-link">Review</a></li>
+                <li class="nav-item"><a href="index.php #choice" class="nav-link">New Arrival</a></li>
+                <li class="nav-item"><a href="index.php #contact" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="login2.php" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <div style="height: 130px;"></div>
+    
+<!-- Form Popup for Login / Sign Up -->
+        <div class="form-popup" id="formPopup">
+            <div class="form-box" id="formBox">
+                <!-- Left Panel: Welcome -->
+                <div class="form-details">
+                    <h2>Welcome Back</h2>
+                    <p id="formTitle">Please log in using your personal information to stay connected with us.</p>
+                </div>
+
+                <!-- Right Panel: Forms -->
+                <div class="form-content">
+
+                <!-- Login Form -->
+                <div id="loginForm">
+                    <h2>LOGIN</h2>
+                    <form name="login" method="post" action="process.php">
+
+                        <h4>Email</h4>
+                        <div class="input-field">
+                            <input type="text" name="email" id="email" required>
+                            <label for="email"></label><br>
+                        </div>
+
+                        <h4>Password</h4>
+                        <div class="input-field">
+                            <input type="password" name="password" id="password" required>
+                            <label for="password"></label><br>
+                        </div><br>
+
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <p class="signup-text">Don't have an account? <a href="#" class="signup-link" onclick="showSignUpForm()">Sign Up</a></p>
+                </div>
+
+
+                    <!-- Sign-Up Form -->
+                    <div id="signUpForm" style="display:none;">
+                        <h2>Sign Up</h2>
+                        <form name="signup" method="post" action="process_signup.php">
+                            <div class="input-field">
+                                <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                                <label for="username"></label><br>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="email" name="email" id="emailSignUp" placeholder="Enter your email" required>
+                                <label for="email"></label><br>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="password" name="password" id="passwordSignUp" placeholder="Enter your password" required>
+                                <label for="password"></label><br>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" required>
+                                <label for="confirm_password"></label><br>
+                            </div>
+
+                            <button type="submit">Sign Up</button>
+                        </form>
+                        <p class="signup-text">Already have an account? <a href="#" class="signup-link" onclick="showLoginForm()">Log In</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+
+
+    <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">@ 2025 Fizelle Luxe Collection</p>
+
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="policy-link">Refund policy</a>
+                </p>
+            </div>
+        </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+        <script>
+
+        const menuOpenButton = document.querySelector("#menu-open-button");
+        const menuCloseButton = document.querySelector("#menu-close-button");
+
+        // Toggle mobile menu visibility when the open button is clicked
+        menuOpenButton.addEventListener("click", () => {
+        // Add class to show the mobile menu
+        document.body.classList.add("show-mobile-menu");
+        });
+
+        // Close mobile menu when the close button is clicked
+        menuCloseButton.addEventListener("click", () => {
+        // Remove class to hide the mobile menu
+        document.body.classList.remove("show-mobile-menu");
+        });
+
+            // Toggle the sidebar visibility
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('active');
+            }
+
+                        // Show Login Form
+            function showLoginForm() {
+                document.getElementById("loginForm").style.display = "block";
+                document.getElementById("signUpForm").style.display = "none";
+                document.getElementById("formTitle").textContent = "Please log in using your personal information to stay connected with us.";
+            }
+
+            // Show Sign Up Form
+            function showSignUpForm() {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("signUpForm").style.display = "block";
+                document.getElementById("formTitle").textContent = "Create your account to join us.";
+            }
+
+            // Open the form when page loads
+            window.onload = function() {
+                showLoginForm();  // Default to show login form on page load
+            }
+        </script>
+
+</body>
+</html>
