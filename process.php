@@ -1,47 +1,53 @@
-<?php
-session_start();
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Processing Login...</title>
+</head>
+<body>
 
-// Hardcoded users (puppet emails)
-$users = [
-    [
-        "email" => "customer@test.com",
-        "password" => "customer123",
-        "role" => "customer"
-    ],
-    [
-        "email" => "staff@test.com",
-        "password" => "staff123",
-        "role" => "staff"
-    ],
-    // You can add more users if needed
+<script>
+// Hardcoded users
+const users = [
+    {
+        email: "customer@test.com",
+        password: "customer123",
+        role: "customer"
+    },
+    {
+        email: "staff@test.com",
+        password: "staff123",
+        role: "staff"
+    }
 ];
 
-// Get login info from form
-$email = $_POST['email'];
-$password = $_POST['password'];
+// Get form data from URL
+const params = new URLSearchParams(window.location.search);
+const email = params.get('email');
+const password = params.get('password');
+
+let authenticated = false;
 
 // Check credentials
-$authenticated = false;
-
-foreach($users as $user){
-    if($user['email'] === $email && $user['password'] === $password){
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['role'] = $user['role'];
-        $authenticated = true;
+users.forEach(user => {
+    if (user.email === email && user.password === password) {
+        authenticated = true;
 
         // Redirect based on role
-        if($user['role'] === "customer"){
-            header("Location: customer.php");
-            exit();
-        } else if($user['role'] === "staff" || $user['role'] === "admin"){
-            header("Location: adminpage.php");
-            exit();
+        if (user.role === "customer") {
+            window.location.href = "customer.html";
+        } else if (user.role === "staff") {
+            window.location.href = "adminpage.html";
         }
     }
-}
+});
 
 // If login failed
-if(!$authenticated){
-    echo "<script>alert('Invalid email or password'); window.location.href='login.php';</script>";
+if (!authenticated) {
+    alert("Invalid email or password");
+    window.location.href = "login2.html";
 }
-?>
+</script>
+
+</body>
+</html>
